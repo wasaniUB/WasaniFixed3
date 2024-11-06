@@ -29,14 +29,18 @@
 
 <table style="width:100%">
 
-  <tr>
-    <td>
-	<img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png"  id="toggleImage" onclick="toggleImage(); toggleInputOne();"/>
-	<br>
-    <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png"  id="toggleImage2" onclick="toggleImage2(); toggleInputTwo();"/> 
-</td>
-    <td><img id="andGate" src="and2off.png" ></td>
-  </tr>
+<div class="d-flex justify-content-around">
+  
+	<button class="btn btn-success" onclick="document.getElementById('clubImage').src='andonoff.png'">1 and 0</button>
+            <button class="btn btn-info" onclick="document.getElementById('clubImage').src='and2off.png'">0 and 0</button>
+			<button class="btn btn-success" onclick="document.getElementById('clubImage').src='andoffon.png'">0 and 1</button>
+            <button class="btn btn-info" onclick="document.getElementById('clubImage').src='and2on.png'">1 and 1</button>
+
+ </div>
+        <div class="text-center mt-3">
+            <img id="clubImage" src="andonoff.png" alt="Club Image" class="img-thumbnail" style="width: 500px;">
+        </div>
+    </div>
 
 </table>
 
