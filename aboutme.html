@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    /* Keyframe for the background color transition */
+    /* Keyframe for background color transition */
     @keyframes colorCycle {
       0% { background-color: #003300; } /* Dark green */
       50% { background-color: #b30000; } /* Dark red */
@@ -21,7 +21,7 @@
     body {
       font: 400 15px/1.8 Lato, sans-serif;
       color: #ccc;
-      animation: colorCycle 6s infinite ease-in-out;
+      animation: colorCycle 8s infinite ease-in-out;
     }
 
     h2 {
@@ -32,20 +32,21 @@
     }
 
     .container {
-      padding: 80px 120px;
-      background-color: #004d00; /* Slightly lighter green for content */
+      padding: 40px 60px;
+      background-color: #004d00;
       border-radius: 8px;
+      margin-top: 20px;
+      color: #f1f1f1;
     }
 
     .navbar {
       font-family: Montserrat, sans-serif;
-      background-color: #b30000; /* Red background for navbar */
+      background-color: #b30000;
       border: 0;
       font-size: 11px !important;
       letter-spacing: 4px;
       opacity: 0.9;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 10px 0;
     }
 
     .navbar li a, .navbar .navbar-brand { 
@@ -59,29 +60,38 @@
     .sidebar-nav {
       font-size: 14px;
       padding: 20px;
-      background-color: #b30000; /* Red background for sidebar */
+      background-color: #b30000;
       height: 100%;
       position: fixed;
       width: 200px;
       top: 0;
       left: 0;
       color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
     }
 
     .sidebar-nav a {
       color: #f1f1f1;
-      display: block;
-      padding: 10px 15px;
+      padding: 10px;
+      width: 100%;
       text-decoration: none;
+      font-weight: bold;
     }
 
     .sidebar-nav a:hover {
-      background-color: #ff4d4d; /* Slightly lighter red on hover */
+      background-color: #ff4d4d;
       color: #fff;
     }
 
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
     footer {
-      background-color: #b30000; /* Red background for footer */
+      background-color: #b30000;
       color: #f5f5f5;
       padding: 32px;
       text-align: center;
@@ -89,11 +99,22 @@
 
     footer p, footer a {
       color: #f5f5f5;
+      text-decoration: none;
     }
 
     footer a:hover {
       color: #f5f5f5;
-      text-decoration: none;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      border-radius: 8px;
+      margin-right: 20px;
     }
 
     .intro-text {
@@ -101,14 +122,8 @@
       font-size: 18px;
       line-height: 1.6;
       color: #eee;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
     }
 
-    .content {
-      margin-left: 220px;
-    }
   </style>
 </head>
 <body>
@@ -130,28 +145,30 @@
   <section>
     <article class="container">
       <h1>Group Members</h1>
-      <p class="intro-text">
-        <img src="WC Profile.jpg" alt="Wasani Castillo" width="184" height="122" style="float:left; margin-right:50px">
-         Wasani Castillo. Age: 16
-      </p> 
-      <p
-       <img src="Shandy.jpg" alt="Shandy Salam" width="184" height="122" style="float:left; margin-right:50px">
-      Shandy Salam. Age: 16 </p>
-      <p
-       <img src="Delrick Pandy.jpg" alt="Delrick Pandy" width="184" height="122" style="float:left; margin-right:50px">
-      Delrick Pandy. Age: 19 </p>
-<p
-       <img src="Lorelie Martinez.jpg" alt="Lorelie Martinez" width="184" height="122" style="float:left; margin-right:50px">
-      Lorelie Martinez. Age: 26 </p>
-
-     
+      <div class="profile">
+        <img src="WC Profile.jpg" alt="Wasani Castillo" width="184" height="122">
+        <p class="intro-text">Wasani Castillo. Age: 16</p>
+      </div>
+      <div class="profile">
+        <img src="Shandy.jpg" alt="Shandy Salam" width="184" height="122">
+        <p class="intro-text">Shandy Salam. Age: 16</p>
+      </div>
+      <div class="profile">
+        <img src="Delrick Pandy.jpg" alt="Delrick Pandy" width="184" height="122">
+        <p class="intro-text">Delrick Pandy. Age: 19</p>
+      </div>
+      <div class="profile">
+        <img src="Lorelie Martinez.jpg" alt="Lorelie Martinez" width="184" height="122">
+        <p class="intro-text">Lorelie Martinez. Age: 26</p>
+      </div>
     </article>
   </section>
 </div>
 
 <footer>
-  <p>@ Powered by UB</p>
+  <p>&copy; Powered by UB</p>
 </footer>
 
 </body>
 </html>
+
