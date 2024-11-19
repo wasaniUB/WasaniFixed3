@@ -6,83 +6,101 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Darker initial background and styling adjustments */
+    /* Base body style with gray background */
     body {
-      background-color: #111; /* Darker black */
       font-family: Arial, sans-serif;
-      color: #f1f1f1;
-      transition: background-color 1s ease; /* Smooth transition */
+      color: #333;
+      background-color: #777;
+      transition: background-color 2s ease-in-out;
     }
-
     header {
       text-align: center;
+      padding: 20px;
+      background-color: #555;
       color: #f1f1f1;
-      margin-bottom: 20px;
     }
-
+    header h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+    }
+    nav {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #888;
+      color: #fff;
+      text-align: center;
+    }
     nav ul {
       list-style-type: none;
       padding: 0;
-      text-align: center;
     }
-
     nav ul li {
-      display: inline;
-      margin-right: 15px;
+      display: inline-block;
+      margin: 0 15px;
     }
-
     nav ul li a {
-      color: #f1f1f1;
-      background: none; /* Remove any default background */
+      color: #fff;
       text-decoration: none;
-      font-size: 1.2em;
-      transition: color 0.3s ease;
+      font-weight: bold;
+      font-size: 16px;
     }
-
-    /* Highlight effect on hover */
     nav ul li a:hover {
-      color: #ffcc00; /* Highlight color */
+      color: #f1f1f1;
     }
-
-    article {
-      text-align: center;
+    section {
       padding: 20px;
+      background-color: #ccc;
+      border-radius: 5px;
+      margin: 20px auto;
+      max-width: 800px;
     }
-
+    article p {
+      font-size: 18px;
+      color: #333;
+    }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #333;
+      padding: 10px;
+      background-color: #555;
       color: #f1f1f1;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 5px;
+      transition: transform 0.5s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h2><b>Fundamentals of Computing</b></h2>
+  <h2>Fundamentals of Computing</h2>
 </header>
 
 <section>
   <nav>
     <ul>
-      <li><h5><a href="index.html">Course</a></h5></li>
-      <li><h5><a href="project.html">Project</a></h5></li>
-      <li><h5><a href="documentatio.html">Concepts</a></h5></li>
-      <li><h5><a href="database.html">Databases</a></h5></li>
-      <li><h5><a href="concepts.html">Documentation</a></h5></li>
-      <li><h5><a href="aboutme.html">Dev Team</a></h5></li>
+      <li><a href="index.html">Course</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="documentation.html">Concepts</a></li>
+      <li><a href="database.html">Databases</a></li>
+      <li><a href="concepts.html">Documentation</a></li>
+      <li><a href="aboutme.html">Dev Team</a></li>
     </ul>
   </nav>
   
   <article>
-    <center>
-      <a href="https://docs.google.com/presentation/d/1U9iXLG5U7AraTIjt5SQsIQRBqt_v-x6M59IeAXXUDR0/edit?usp=sharing">
-        <img src="concepts.png" alt="Concepts" width="515" height="290">
-      </a>
-      <p>Click on the image above for the presentation.</p>
-      <p><a href="https://drive.google.com/file/d/1MQ6RLFJ4ePxckq2uc3vrH9X65NVjI4kb/view?usp=sharing">Click here for the recording.</a></p>
-    </center>
+    <p>Documentation</p>
+     <img src="documentation.png" alt="Documentation">
+    </a>
   </article>
 </section>
 
@@ -90,16 +108,11 @@
   <p>@ Powered by UB</p>
 </footer>
 
+<!-- JavaScript for background transition effect -->
 <script>
-  // JavaScript for constant background color transition between black and gray
-  const colors = ['#111', '#333']; // Dark shades of black and gray
-  let currentColor = 0;
-
-  setInterval(() => {
-    // Toggle the color between black and gray
-    document.body.style.backgroundColor = colors[currentColor];
-    currentColor = (currentColor + 1) % colors.length;
-  }, 3000); // Transition every 3 seconds
+  document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.backgroundColor = "#333";
+  });
 </script>
 
 </body>
